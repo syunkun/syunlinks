@@ -1,0 +1,49 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR琵琶湖線 時刻表 (統合版)</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>🚅 JR琵琶湖線 時刻表</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <label for="station-select">駅を選択:</label>
+            <select id="station-select"></select>
+
+            <label for="direction-select">方面を選択:</label>
+            <select id="direction-select">
+                <option value="up">上り (米原・近江塩津方面)</option>
+                <option value="down">下り (京都・大阪方面)</option>
+            </select>
+        </section>
+
+        <section class="timetable-display">
+            <h2><span id="current-station">駅を選択してください</span> 時刻表</h2>
+            <table id="timetable-table">
+                <thead>
+                    <tr>
+                        <th>時</th>
+                        <th>分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 JR琵琶湖線時刻表</p>
+    </footer>
+
+    <!-- JavaScript を外部ファイルに分離 -->
+    <script src="timetableData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- ...existing code... -->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡 割り勘計算機</title>
+    <style>
+        /* 簡易的なCSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result-area {
+            margin-top: 30px;
+            padding: 15px;
+            border: 2px dashed #4CAF50;
+            border-radius: 5px;
+            background-color: #e8f5e9;
+            text-align: center;
+        }
+        .result-area p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .result-area strong {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💸 割り勘計算機</h1>
+
+        <label for="totalAmount">合計金額 (円)</label>
+        <input type="number" id="totalAmount" placeholder="例: 5800" value="5800">
+
+        <label for="peopleCount">人数 (人)</label>
+        <input type="number" id="peopleCount" placeholder="例: 3" value="3">
+
+        <label for="roundingType">端数処理</label>
+        <select id="roundingType">
+            <option value="none">端数そのまま (1円単位)</option>
+            <option value="ceil10">10円単位で切り上げ</option>
+            <option value="ceil100">100円単位で切り上げ</option>
+            <option value="floor10">10円単位で切り捨て</option>
+        </select>
+        
+        <button onclick="calculate()">計算する</button>
+
+        <div class="result-area" id="resultArea">
+            <p>結果がここに表示されます。</p>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
